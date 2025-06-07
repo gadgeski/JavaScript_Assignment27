@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URLパラメーター表示</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="box">URLパラメーターの取得<</div>
+    <br />
+    <div class="param-display">
+      <p>
+        URLを確認してください:
+        <span class="url-example"
+          >http://localhost:8080/index.html?name=John&city=Tokyo</span
+        >
+      </p>
+      <p>あなたの名前: <span id="paramName" class="param-value">N/A</span></p>
+      <p>あなたの都市: <span id="paramCity" class="param-value">N/A</span></p>
+      <p class="note">
+        URLの末尾に「?name=あなたの名前&city=あなたの都市」を追加して試してみてください。
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
