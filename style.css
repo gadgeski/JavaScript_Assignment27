@@ -1,110 +1,59 @@
 body {
-  font-family: "Lato", sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  font-family: "Arial", sans-serif;
   margin: 0;
-  background-color: #66cdaa;
   color: #333;
-}
-/*=====================================================
-
-Param
-
-=====================================================*/
-.param-display {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  width: 100%;
-  max-width: 500px;
+  line-height: 1.6;
 }
 
-.param-display p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  color: #555;
-}
-
-.param-value {
-  font-weight: bold;
-  color: #3f51b5; /* パラメータ値を強調 */
-  display: inline-block; /* スペースを確保 */
-  min-width: 50px;
-}
-
-.url-example {
-  font-family: "Roboto Mono", monospace;
-  background-color: #f0f0f0;
-  padding: 3px 8px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  color: #777;
-  word-break: break-all; /* 長いURLがはみ出さないように */
-}
-
-.note {
-  font-size: 0.9em;
-  color: #888;
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px dashed #eee;
-}
-/*=====================================================
-
-Box
-
-=====================================================*/
-.box {
-  width: 720px;
-  height: 480px;
-  margin: 13% auto 0;
+.parallax-section {
+  height: 100vh; /* ビューポートの高さに合わせてセクションの高さを設定 */
   display: flex;
-  align-items: center;
   justify-content: center;
-  color: #98fb98;
-  font-size: 32px;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-attachment: fixed; /* 背景画像を固定 */
+  background-size: cover; /* 背景画像をカバーサイズに */
+  background-position: center center;
+  position: relative; /* 子要素の配置用 */
+  overflow: hidden; /* パララックステキストがはみ出さないように */
+}
+
+.section-one {
+  background-image: url("img/Tasty_IceTea2025_4.png");
+}
+
+.section-two {
+  background-image: url("img/Tasty_IceTea2025_3.png");
+}
+
+.section-three {
+  background-image: url("img/Tasty_IceTea2025_2.png");
+}
+
+.parallax-text {
+  font-size: 4em;
   font-weight: bold;
-  position: relative;
-  transition: 0.4s;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 2; /* 背景より手前に表示 */
+  transition: transform 0.1s ease-out; /* JavaScriptによる動きを滑らかに */
 }
-.box::before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  transition: 0.4s;
-  transition-delay: 0.5s;
+
+.content-section {
+  padding: 100px 50px;
+  background-color: #f8f9fa;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 50px;
 }
-.box::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-  border-right: 2px solid rgba(255, 255, 255, 0.5);
-  position: absolute;
-  bottom: -1px;
-  right: -1px;
-  transition: 0.4s;
-  transition-delay: 0.5s;
+
+.content-section p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
-.box:hover:before,
-.box:hover::after {
-  width: 100%;
-  height: 100%;
-  border-color: rgba(255, 255, 255, 0.3);
-  transition-delay: 0s;
-}
-.box:hover {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  transition-delay: 0.3s;
-}
+
+/* スクロールバーを見えやすくするために、bodyに一時的なheightを設定しても良い */
+/* body { height: 300vh; } */

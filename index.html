@@ -3,24 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>URLパラメーター表示</title>
+    <title>パララックスエフェクト</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="box">URLパラメーターの取得</div>
-    <br />
-    <div class="param-display">
+    <div class="parallax-section section-one">
+      <h1 class="parallax-text">やすらぎの<br />あの香り</h1>
+    </div>
+
+    <div class="content-section">
       <p>
-        URLを確認してください:
-        <span class="url-example"
-          >http://localhost:8080/index.html?name=John&city=Tokyo</span
-        >
+        このセクションは通常通りスクロールします。上部の背景画像が異なる速度で動くのを見てください。
       </p>
-      <p>あなたの名前: <span id="paramName" class="param-value">N/A</span></p>
-      <p>あなたの都市: <span id="paramCity" class="param-value">N/A</span></p>
-      <p class="note">
-        URLの末尾に「?name=あなたの名前&city=あなたの都市」を追加して試してみてください。
+      <p>
+        パララックスエフェクトは、要素が異なる速度でスクロールすることで、奥行き感を演出する技術です。
       </p>
+      <p>
+        JavaScriptを使って、スクロール量に応じて背景要素や前景要素の`transform`や`background-position`を動的に変更しています。
+      </p>
+    </div>
+
+    <div class="parallax-section section-two">
+      <h2 class="parallax-text">みずみずしく<br />爽やかな風味</h2>
+    </div>
+
+    <div class="content-section">
+      <p>
+        さらにスクロールすると、別の背景画像がパララックス効果とともに現れます。
+      </p>
+      <p>
+        このような効果は、ウェブサイトにインタラクティブで魅力的な視覚体験をもたらします。
+      </p>
+    </div>
+
+    <div class="parallax-section section-three">
+      <h2 class="parallax-text">暑い季節の<br />お供にどうぞ</h2>
     </div>
 
     <script src="script.js"></script>
